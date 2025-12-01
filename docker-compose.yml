@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  omnitry-api:
+    build: .
+    container_name: omnitry-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./checkpoints:/app/checkpoints
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    command: python api_server.py
+    restart: unless-stopped

@@ -1,0 +1,56 @@
+# Git
+.git
+.gitignore
+.gitmodules
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints
+
+# Logs
+*.log
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Gradio temp
+.gradio/
+
+# Large checkpoint files (download separately)
+checkpoints/
+*.safetensors
+*.ckpt
+*.pth
+*.bin
+
+# Demo outputs
+result*.png
+output*.png
